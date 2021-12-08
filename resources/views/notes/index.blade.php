@@ -11,6 +11,7 @@
             <tr>
                 <td>{{ $note->matkul }}</td>
                 <td>{{ $note->kelas }}</td>
+                <td>{{ $note->hari }}</td>
                 <td>
                     <a href="/notes/{{ $note->id }}/edit">edit</a>
                     <form action="/notes/{{ $note->id }}" method="POST">

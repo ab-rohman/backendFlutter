@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\NoteApiController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -14,6 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+
+Route::get('/notes', [NoteApiController::class,'index']);
+//Route::get('/notes/create', [NoteApiController::class,'create']);
+Route::post('/notes', [NoteApiController::class,'store']);
+//Route::get('/notes/{id}/edit', [NoteApiController::class,'edit']);
+Route::get('/notes/{id}', [NoteApiController::class,'show']);
+Route::put('/notes/{id}', [NoteApiController::class,'update']);
+Route::delete('/notes/{id}',[NoteApiController::class,'destroy']);

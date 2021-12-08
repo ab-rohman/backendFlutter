@@ -17,6 +17,7 @@ class CreateNotesTable extends Migration
             $table->id();
             $table->string('matkul');
             $table->string('kelas');
+            $table->string('hari');
             $table->timestamps();
         });
     }

@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Note extends Model
 {
     use HasFactory;
-    protected $fillable = ['matkul','kelas'];
+    protected $fillable = ['matkul','kelas','hari'];
 }
